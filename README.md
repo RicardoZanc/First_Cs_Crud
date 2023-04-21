@@ -1,1 +1,3 @@
-This project is being made with to only pourpose for me to explore connections with SQL, i'll be branching differents parts of my study, because at the end it is inetended to be a whole CRUD, im following <a href="https://www.guru99.com/c-sharp-access-database.html">this tutorial</a> while just google others doubt that may appear while i'm studying this subject
+This project is being made with to only pourpose for me to explore connections with SQL, i'll be branching differents parts of my study, because at the end it is intended to be a whole CRUD, im following <a href="https://www.guru99.com/c-sharp-access-database.html">this tutorial</a> while just google others doubt that may appear while i'm studying this subject!
+
+The file "Teoria" is my personal documentation of how the code in those files works, so every time i need to remember something about this subject i can read it, this file is in brazilian portuguese, wich is my native language!
