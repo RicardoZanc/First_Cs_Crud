@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,21 @@ namespace First_Cs_Crud
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btn_Connect_Click(object sender, EventArgs e)
+        {
+            string connectionString;
+            SqlConnection cnn;
+
+            connectionString = @"Data Source=DESKTOP-55KAS32\SQLEXPRESS; Initial Catalog=Teste;
+              User ID=sa;Password=SQLEXPRESS";
+
+            cnn = new SqlConnection(connectionString);
+
+            cnn.Open();
+            MessageBox.Show("Connection Open ! ");
+            cnn.Close();
         }
     }
 }

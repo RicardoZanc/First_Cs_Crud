@@ -1,0 +1,11 @@
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\bin\Debug\First_Cs_Crud.exe.config
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\bin\Debug\First_Cs_Crud.exe
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\bin\Debug\First_Cs_Crud.pdb
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\obj\Debug\First_Cs_Crud.csproj.AssemblyReference.cache
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\obj\Debug\First_Cs_Crud.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\obj\Debug\First_Cs_Crud.Form1.resources
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\obj\Debug\First_Cs_Crud.Properties.Resources.resources
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\obj\Debug\First_Cs_Crud.csproj.GenerateResource.cache
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\obj\Debug\First_Cs_Crud.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\obj\Debug\First_Cs_Crud.exe
+C:\Users\Ricardo\Documents\C#\First_Cs_Crud\First_Cs_Crud\obj\Debug\First_Cs_Crud.pdb

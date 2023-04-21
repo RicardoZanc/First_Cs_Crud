@@ -1,0 +1,1 @@
+This project is being made with to only pourpose for me to explore connections with SQL, i'll be branching differents parts of my study, because at the end it is inetended to be a whole CRUD, im following <a href="https://www.guru99.com/c-sharp-access-database.html">this tutorial</a> while just google others doubt that may appear while i'm studying this subject
