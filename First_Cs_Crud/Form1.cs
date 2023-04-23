@@ -29,7 +29,25 @@ namespace First_Cs_Crud
             cnn = new SqlConnection(connectionString);
 
             cnn.Open();
-            MessageBox.Show("Connection Open ! ");
+                     
+            SqlCommand command;
+            SqlDataReader dataReader;
+            String sql, Output = "";
+
+            //sql = "Select TutorialId, TutorialName  from testetb";
+
+            command = new SqlCommand("Select TutorialId, TutorialName  from testetb", cnn);
+
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read()) 
+            {
+                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + "\n";
+            }
+
+            MessageBox.Show(Output);
+            dataReader.Close();
+            command.Dispose();
             cnn.Close();
         }
     }
