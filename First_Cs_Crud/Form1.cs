@@ -23,7 +23,7 @@ namespace First_Cs_Crud
             string connectionString;
             SqlConnection cnn;
 
-            connectionString = @"Data Source=DESKTOP-55KAS32\SQLEXPRESS; Initial Catalog=Teste;
+            connectionString = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=Teste;
               User ID=sa;Password=SQLEXPRESS";
 
             cnn = new SqlConnection(connectionString);
