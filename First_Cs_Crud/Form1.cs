@@ -30,36 +30,32 @@ namespace First_Cs_Crud
 
             cnn.Open();
                      
-            SqlCommand command;
+            SqlCommand ReadCommand, InsertCommand;
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlDataReader dataReader;
             String sql, Output = "";
 
-            sql = "INSERT INTO testetb (TutorialId, TutorialName), values(3, 'VB.Net');";
+            sql = "INSERT INTO testetb (TutorialId, TutorialName) values(3, 'VB.Net');";
 
-            command = new SqlCommand(sql, cnn);
-
-            command.ExecuteNonQuery();
-
-            //adapter.InsertCommand = new SqlCommand(sql, cnn);
-            //adapter.InsertCommand.ExecuteNonQuery();
+            InsertCommand = new SqlCommand(sql, cnn);
+            InsertCommand.ExecuteNonQuery();
 
 
-            //sql = "Select TutorialId, TutorialName  from testetb";
+            sql = "Select TutorialId, TutorialName  from testetb";
 
-            //command = new SqlCommand(sql, cnn);
+            ReadCommand = new SqlCommand(sql, cnn);
 
-            //dataReader = command.ExecuteReader();
+            dataReader = ReadCommand.ExecuteReader();
 
-            //while (dataReader.Read()) 
-            //{
-            //    Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + "\n";
-            //}
+            while (dataReader.Read())
+            {
+                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + "\n";
+            }
 
-            //MessageBox.Show(Output);
-            //dataReader.Close();
-            //command.Dispose();
-            //cnn.Close();
+            MessageBox.Show(Output);
+            dataReader.Close();
+            ReadCommand.Dispose();
+            cnn.Close();
         }
     }
 }
