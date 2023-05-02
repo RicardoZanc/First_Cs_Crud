@@ -30,14 +30,14 @@ namespace First_Cs_Crud
 
             cnn.Open();
                      
-            SqlCommand ReadCommand, UpdateCommand;
+            SqlCommand ReadCommand, DeleteCommand;
             SqlDataReader dataReader;
             string sql, Output = "";
 
-            sql = "UPDATE testetb SET TutorialName = 'VB.Net Complete' WHERE TutorialId=3"; 
+            sql = "DELETE FROM testetb WHERE TutorialId=3"; 
 
-            UpdateCommand = new SqlCommand(sql, cnn); 
-            UpdateCommand.ExecuteNonQuery(); 
+            DeleteCommand = new SqlCommand(sql, cnn); 
+            DeleteCommand.ExecuteNonQuery(); 
 
 
             sql = "Select TutorialId, TutorialName  from testetb";
