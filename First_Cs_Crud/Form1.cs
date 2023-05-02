@@ -30,14 +30,14 @@ namespace First_Cs_Crud
 
             cnn.Open();
                      
-            SqlCommand ReadCommand, InsertCommand;
+            SqlCommand ReadCommand, UpdateCommand;
             SqlDataReader dataReader;
-            String sql, Output = "";
+            string sql, Output = "";
 
-            sql = "INSERT INTO testetb (TutorialId, TutorialName) values(3, 'VB.Net');"; 
+            sql = "UPDATE testetb SET TutorialName = 'VB.Net Complete' WHERE TutorialId=3"; 
 
-            InsertCommand = new SqlCommand(sql, cnn); 
-            InsertCommand.ExecuteNonQuery(); 
+            UpdateCommand = new SqlCommand(sql, cnn); 
+            UpdateCommand.ExecuteNonQuery(); 
 
 
             sql = "Select TutorialId, TutorialName  from testetb";
