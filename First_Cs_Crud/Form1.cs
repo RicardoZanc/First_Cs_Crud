@@ -34,10 +34,10 @@ namespace First_Cs_Crud
             SqlDataReader dataReader;
             String sql, Output = "";
 
-            sql = "INSERT INTO testetb (TutorialId, TutorialName) values(3, 'VB.Net');";
+            sql = "INSERT INTO testetb (TutorialId, TutorialName) values(3, 'VB.Net');"; 
 
-            InsertCommand = new SqlCommand(sql, cnn);
-            InsertCommand.ExecuteNonQuery();
+            InsertCommand = new SqlCommand(sql, cnn); 
+            InsertCommand.ExecuteNonQuery(); 
 
 
             sql = "Select TutorialId, TutorialName  from testetb";
