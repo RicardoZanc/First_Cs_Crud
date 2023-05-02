@@ -31,7 +31,6 @@ namespace First_Cs_Crud
             cnn.Open();
                      
             SqlCommand ReadCommand, InsertCommand;
-            SqlDataAdapter adapter = new SqlDataAdapter();
             SqlDataReader dataReader;
             String sql, Output = "";
 
