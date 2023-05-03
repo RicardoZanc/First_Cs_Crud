@@ -20,41 +20,37 @@ namespace First_Cs_Crud
 
         private void btn_Connect_Click(object sender, EventArgs e)
         {
-            string connectionString;
-            SqlConnection cnn;
+        }
 
-            connectionString = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=Teste;
-              User ID=sa;Password=SQLEXPRESS";
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'testeDataSet.testetb' table. You can move, or remove it, as needed.
+            this.testetbTableAdapter.Fill(this.testeDataSet.testetb);
 
-            cnn = new SqlConnection(connectionString);
+        }
 
-            cnn.Open();
-                     
-            SqlCommand ReadCommand, DeleteCommand;
-            SqlDataReader dataReader;
-            string sql, Output = "";
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
 
-            sql = "DELETE FROM testetb WHERE TutorialId=3"; 
+        }
 
-            DeleteCommand = new SqlCommand(sql, cnn); 
-            DeleteCommand.ExecuteNonQuery(); 
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+
+            //string cnnString, sqlUpdate;
+            //SqlConnection cnn;
+            //SqlCommand UpdateCommand;
+            
+            //cnnString = @"Data Source=localhost\SQLEXPRESS; Initical Catalog=Teste;
+            //User ID=sa;Password=SQLEXPRESS";
+
+            //cnn = new SqlConnection(cnnString);
+
+            //sqlUpdate = $""
+            
 
 
-            sql = "Select TutorialId, TutorialName  from testetb";
-
-            ReadCommand = new SqlCommand(sql, cnn);
-
-            dataReader = ReadCommand.ExecuteReader();
-
-            while (dataReader.Read())
-            {
-                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + "\n";
-            }
-
-            MessageBox.Show(Output);
-            dataReader.Close();
-            ReadCommand.Dispose();
-            cnn.Close();
+            
         }
     }
 }
