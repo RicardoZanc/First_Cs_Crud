@@ -33,35 +33,35 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_TutorialId = new System.Windows.Forms.TextBox();
+            this.testetbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testeDataSet = new First_Cs_Crud.TesteDataSet();
             this.txt_TutorialName = new System.Windows.Forms.TextBox();
+            this.testetbBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.testeDataSet = new First_Cs_Crud.TesteDataSet();
-            this.testetbBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testetbTableAdapter = new First_Cs_Crud.TesteDataSetTableAdapters.testetbTableAdapter();
-            this.testetbBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_Update = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.testetbBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testetbBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.testeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testetbBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testetbBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(206, 129);
+            this.label1.Location = new System.Drawing.Point(61, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 23);
@@ -72,7 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(162, 207);
+            this.label2.Location = new System.Drawing.Point(17, 132);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 23);
@@ -82,20 +82,36 @@
             // txt_TutorialId
             // 
             this.txt_TutorialId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testetbBindingSource, "TutorialId", true));
-            this.txt_TutorialId.Location = new System.Drawing.Point(311, 129);
+            this.txt_TutorialId.Location = new System.Drawing.Point(166, 54);
             this.txt_TutorialId.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_TutorialId.Name = "txt_TutorialId";
             this.txt_TutorialId.Size = new System.Drawing.Size(196, 32);
             this.txt_TutorialId.TabIndex = 2;
             // 
+            // testetbBindingSource
+            // 
+            this.testetbBindingSource.DataMember = "testetb";
+            this.testetbBindingSource.DataSource = this.testeDataSet;
+            // 
+            // testeDataSet
+            // 
+            this.testeDataSet.DataSetName = "TesteDataSet";
+            this.testeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txt_TutorialName
             // 
-            this.txt_TutorialName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testetbBindingSource1, "TutorialName", true));
-            this.txt_TutorialName.Location = new System.Drawing.Point(311, 198);
+            this.txt_TutorialName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testetbBindingSource, "TutorialName", true));
+            this.txt_TutorialName.Location = new System.Drawing.Point(166, 123);
             this.txt_TutorialName.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txt_TutorialName.Name = "txt_TutorialName";
             this.txt_TutorialName.Size = new System.Drawing.Size(196, 32);
             this.txt_TutorialName.TabIndex = 3;
+            this.txt_TutorialName.TextChanged += new System.EventHandler(this.txt_TutorialName_TextChanged);
+            // 
+            // testetbBindingSource1
+            // 
+            this.testetbBindingSource1.DataMember = "testetb";
+            this.testetbBindingSource1.DataSource = this.testeDataSet;
             // 
             // bindingNavigator1
             // 
@@ -122,10 +138,35 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(731, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(643, 25);
             this.bindingNavigator1.TabIndex = 4;
             this.bindingNavigator1.Text = "bindingNavigator1";
             this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -160,16 +201,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -192,49 +226,16 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // testeDataSet
-            // 
-            this.testeDataSet.DataSetName = "TesteDataSet";
-            this.testeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // testetbBindingSource
-            // 
-            this.testetbBindingSource.DataMember = "testetb";
-            this.testetbBindingSource.DataSource = this.testeDataSet;
             // 
             // testetbTableAdapter
             // 
             this.testetbTableAdapter.ClearBeforeFill = true;
             // 
-            // testetbBindingSource1
-            // 
-            this.testetbBindingSource1.DataMember = "testetb";
-            this.testetbBindingSource1.DataSource = this.testeDataSet;
-            // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(399, 260);
+            this.btn_Update.Location = new System.Drawing.Point(254, 185);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(108, 45);
             this.btn_Update.TabIndex = 5;
@@ -246,7 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 363);
+            this.ClientSize = new System.Drawing.Size(643, 366);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.txt_TutorialName);
@@ -258,12 +259,12 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.testetbBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testetbBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.testeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testetbBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testetbBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

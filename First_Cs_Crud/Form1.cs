@@ -37,20 +37,34 @@ namespace First_Cs_Crud
         private void btn_Update_Click(object sender, EventArgs e)
         {
 
-            //string cnnString, sqlUpdate;
-            //SqlConnection cnn;
-            //SqlCommand UpdateCommand;
-            
-            //cnnString = @"Data Source=localhost\SQLEXPRESS; Initical Catalog=Teste;
-            //User ID=sa;Password=SQLEXPRESS";
+            string cnnString, sqlUpdate;
+            SqlConnection cnn;
+            SqlCommand UpdateCommand;
 
-            //cnn = new SqlConnection(cnnString);
+            cnnString = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=Teste;
+            User ID=sa;Password=SQLEXPRESS";
 
-            //sqlUpdate = $""
-            
+            cnn = new SqlConnection(cnnString);
+
+            sqlUpdate = $"UPDATE testetb SET TutorialName = '{txt_TutorialName.Text}' WHERE TutorialId = {txt_TutorialId.Text}";
+
+            UpdateCommand = new SqlCommand(sqlUpdate, cnn);
+
+            cnn.Open();
+
+            UpdateCommand.ExecuteNonQuery();
+
+            MessageBox.Show("Updated");
+
+            UpdateCommand.Dispose();
+            cnn.Close();
 
 
-            
+        }
+
+        private void txt_TutorialName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
